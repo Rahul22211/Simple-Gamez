@@ -2,12 +2,6 @@
 
 A collection of lightweight, browser-based mini games built with HTML, CSS & JavaScript.
 
-## 🚀 Demo / Screenshots
-
-> (You can add a GIF or screenshot here to show gameplay)
-
-![Simple Gamez screenshot](path/to/screenshot.png)
-
 ## 🧩 Features
 
 - Simple games like (Name the games — e.g. Snake, Tic-Tac-Toe, etc.)
