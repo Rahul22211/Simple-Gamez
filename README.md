@@ -75,10 +75,6 @@ This project is released under the MIT License. See LICENSE for details.
 ⭐ If you like this project, give it a star.
 🧷 Don’t forget to link your pull requests to Hacktoberfest by adding appropriate labels.
 
-yaml
-Copy code
 
----
 
-If you like, I can directly generate the Markdown (with screenshots or badges) and send you a file you can copy-paste. Do you want me to do that?
-::contentReference[oaicite:0]{index=0}
+
