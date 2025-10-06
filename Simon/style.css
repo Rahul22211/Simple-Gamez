@@ -1,0 +1,66 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.heading{
+    align-self: center;
+    justify-self: center;
+}
+
+.brown, .blue, .pink, .red {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.2s, transform 0.2s;
+}
+.brown{ background-color: brown; }
+.blue{ background-color: blue; }
+.pink{ background-color: pink; }
+.red{ background-color: red; }
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 16px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.flick{
+    background-color: white !important;
+    transform: scale(1.08);
+}
+
+.score {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    color: #333;
+}
+.strt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#start {
+    padding: 8px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: center;
+
+}
+#start:hover {
+    background: #e0e0e0;
+}
