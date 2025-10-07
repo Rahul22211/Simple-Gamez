@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock paper Scissors Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Rock Paper Scissors</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="rock.png">
-        </div>
-         <div class="choice" id="paper">
-            <img src="paper.png">
-        </div>
-         <div class="choice" id="scissors">
-            <img src="scissors.png">
-        </div>
-    </div>
+    <title>Rock Paper Scissors</title>
 
-    <div class="score-board">
-        <div class="score">
-            <p id="user-score">0</p>
-            <p>You</p>
-        </div>
-        <div class="score">
-            <p id="comp-score">0</p>
-            <p>Computer</p>
-        </div>
-    </div>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="game-container">
+      <h1 class="heading">Rock Paper Scissors</h1>
+      <div class="game-controls" id="gameControls">
+        <div id="rock" class="game-button rock"></div>
+        <div id="paper" class="game-button paper"></div>
+        <div id="scissors" class="game-button scissors"></div>
+      </div>
 
-    <div class="msg-container">
-        <p id="msg">Play your move</p>
-    </div>
-    <script src="app.js"></script>
-</body>
+      <div id="result"></div>
+      <div class="reset-and-auto-play" id="resetAndAutoPlay">
+        <div class="reset" id="resetBtn">Reset score</div>
+        <div id="autoPlay" class="auto-play">Auto Play</div>
+      </div>
+
+      <div class="auto-play-options hidden" id="autoPlayOptions">
+      </div>
+    </main>
+  </body>
 </html>
