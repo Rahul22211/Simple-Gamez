@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Gamez Arcade</title>
+  <meta name="description" content="A hub for simple web games." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">Simple Gamez Arcade</div>
+    <nav class="nav">
+      <a href="https://github.com/Rahul22211/Simple-Gamez" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Insert Coin</h1>
+      <p>Pick a game and press Play.</p>
+    </section>
+
+    <section class="library">
+      <div class="library-head">
+        <h2>Games</h2>
+        <input id="search" type="search" placeholder="Search games..." aria-label="Search games" />
+      </div>
+
+      <div id="grid" class="grid">
+        <!-- Tic Tac Toe -->
+        <article class="card" data-title="tic tac toe">
+          <div class="thumb t1" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3>Tic Tac Toe</h3>
+            <div class="actions">
+              <button class="play" data-url="./Tic-Tac-Toe/index.html" aria-label="Play Tic Tac Toe">Play</button>
+              <a class="open" href="./Tic-Tac-Toe/index.html" target="_blank" rel="noopener">Open ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Rock Paper Scissors -->
+        <article class="card" data-title="rock paper scissors">
+          <div class="thumb t2" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3>Rock Paper Scissors</h3>
+            <div class="actions">
+              <button class="play" data-url="./Stone-Paper-Scissor/index.html" aria-label="Play Rock Paper Scissors">Play</button>
+              <a class="open" href="./Stone-Paper-Scissor/index.html" target="_blank" rel="noopener">Open ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Simon -->
+        <article class="card" data-title="simon">
+          <div class="thumb t3" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3>Simon</h3>
+            <div class="actions">
+              <button class="play" data-url="./Simon/index.html" aria-label="Play Simon">Play</button>
+              <a class="open" href="./Simon/index.html" target="_blank" rel="noopener">Open ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lunar Lander -->
+        <article class="card" data-title="lunar lander">
+          <div class="thumb t4" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3>Lunar Lander — Autopilot Challenge</h3>
+            <div class="actions">
+              <button class="play" data-url="./Lunar%20Lander/index.html" aria-label="Play Lunar Lander">Play</button>
+              <a class="open" href="./Lunar%20Lander/index.html" target="_blank" rel="noopener">Open ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p id="empty" class="empty" hidden>No games match your search.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Simple Gamez</p>
+  </footer>
+
+  <!-- Simple modal/overlay -->
+  <div id="overlay" class="overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-head">
+        <h3 id="modalTitle">Loading…</h3>
+        <div class="modal-actions">
+          <button id="reload" class="ghost">Reload</button>
+          <a id="openTab" class="ghost" target="_blank" rel="noopener">Open ↗</a>
+          <button id="close" class="danger" aria-label="Close">Close</button>
+        </div>
+      </header>
+      <div class="modal-body">
+        <iframe id="frame" title="Game frame" sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
