@@ -14,21 +14,6 @@ A collection of lightweight, browser-based mini games built with HTML, CSS & Jav
 You only need a modern web browser.  
 If you have a local server setup (e.g. `http-server`, `live-server`) it's helpful for testing, but not mandatory.
 
-## 📂 Project Structure
-
-├── index.html
-├── css/
-│ └── styles.css
-├── js/
-│ └── game-logic.js
-├── assets/
-│ └── (images, icons, etc.)
-└── README.md
-
-bash
-Copy code
-
-Adjust this to your actual folder layout.
 
 ## 🧭 Getting Started (Development)
 
