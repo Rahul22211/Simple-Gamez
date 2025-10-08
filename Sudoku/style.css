@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #89f7fe, #66a6ff);
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.level-buttons {
+  margin-bottom: 10px;
+}
+
+.level-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.level-btn:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+
+#sudoku-container {
+  display: grid;
+  grid-template-columns: repeat(9, 50px);
+  grid-template-rows: repeat(9, 50px);
+  gap: 0;
+  border: 3px solid #333;
+}
+
+input {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #888;
+  transition: 0.2s;
+}
+
+input:focus {
+  background-color: #dff9fb;
+  outline: none;
+}
+
+input:disabled {
+  background-color: #f1f2f6;
+  font-weight: bold;
+  color: #2f3542;
+}
+
+input:nth-child(3n) {
+  border-right: 3px solid #333;
+}
+input:nth-child(27n) {
+  border-bottom: 3px solid #333;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+.btn {
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff6348;
+  transform: scale(1.05);
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
