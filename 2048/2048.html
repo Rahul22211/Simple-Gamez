@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game - Simple Gamez</title>
+    <link rel="stylesheet" href="2048.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">2048</h1>
+            <p class="subtitle">Join the numbers and get to the 2048 tile!</p>
+        </div>
+
+        <div class="score-container">
+            <div class="score-box">
+                <div class="score-label">Score</div>
+                <div class="score-value" id="current-score">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-label">Best</div>
+                <div class="score-value" id="best-score">0</div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <strong>HOW TO PLAY:</strong> Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one! On mobile, swipe to move tiles.
+        </div>
+
+        <div class="controls">
+            <button class="new-game-btn" id="new-game-btn">New Game</button>
+        </div>
+
+        <div class="game-container">
+            <div class="grid-container" id="grid-container">
+                <!-- Grid cells -->
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            
+            <div class="game-message" id="game-message">
+                <div class="message-title" id="message-title"></div>
+                <div class="message-text" id="message-text"></div>
+                <button class="try-again-btn" id="try-again-btn">Try Again</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Created for Simple-Gamez Repository</p>
+            <p>Use arrow keys or swipe to play!</p>
+        </div>
+    </div>
+
+    <script src="2048.js"></script>
+</body>
+</html>
