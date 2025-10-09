@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.game-area {
+    margin: 1.5rem 0;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 150px;
+    margin-right: 10px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.3s;
+}
+
+#submit {
+    background: #667eea;
+    color: white;
+}
+
+#submit:hover {
+    background: #5a6fd8;
+}
+
+#restart {
+    background: #e74c3c;
+    color: white;
+}
+
+#restart:hover {
+    background: #c0392b;
+}
+
+#message {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1rem 0;
+    min-height: 25px;
+}
+
+.too-high {
+    color: #e74c3c;
+}
+
+.too-low {
+    color: #f39c12;
+}
+
+.correct {
+    color: #27ae60;
+}
+
+#attempts {
+    color: #666;
+    font-size: 14px;
+}   
