@@ -1,59 +1,49 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const guessInput = document.getElementById('guess');
-    const submitBtn = document.getElementById('submit');
-    const restartBtn = document.getElementById('restart');
-    const message = document.getElementById('message');
-    const attemptsEl = document.getElementById('attempts');
-    
-    let randomNumber;
-    let attempts;
-    
-    function startNewGame() {
-        randomNumber = Math.floor(Math.random() * 100) + 1;
-        attempts = 0;
-        message.textContent = '';
-        message.className = '';
-        attemptsEl.textContent = 'Attempts: 0';
-        guessInput.value = '';
-        guessInput.focus();
+let secretNumber;
+let tries;
+
+function startGame() {
+  secretNumber = Math.floor(Math.random() * 100) + 1;
+  tries = 0;
+  document.getElementById('message').textContent = '';
+  document.getElementById('attempts').textContent = '';
+  document.getElementById('guessInput').value = '';
+}
+//Math.floor(Math.random() * 100) + 1;
+function checkguess() {
+  const guess = Number(document.getElementById('guessInput').value);
+
+  if (!guess || guess < 1 || guess > 100) {
+    document.getElementById('message').textContent = 'Enter a number between 1 and 100!';
+    return;
+  }
+  else if(!Number.isInteger(guess)) {
+    document.getElementById('message').textContent = 'Enter a valid number!';
+    return;
+  }
+  tries++;
+  const diff = Math.abs(secretNumber - guess);
+  
+  if (guess === secretNumber) {
+    document.getElementById('message').textContent = `🎉 Correct! The number was ${secretNumber}.`;
+    tries === 1 ? `You guessed it in ${tries} try.` : `You guessed it in ${tries} tries.`;
+    document.getElementById('gameCard').classList.add('card-correct');
+  } else if (guess < secretNumber) {
+    if (diff > 10) {
+      document.getElementById('message').textContent = '⬆️ Too low! Try again.';
+    } else {
+      document.getElementById('message').textContent = '⬆️ Close! Try a bit higher.';
     }
-    
-    function makeGuess() {
-        const guess = parseInt(guessInput.value);
-        
-        if (!guess || guess < 1 || guess > 100) {
-            message.textContent = 'Please enter a valid number between 1 and 100!';
-            message.className = '';
-            return;
-        }
-        
-        attempts++;
-        attemptsEl.textContent = `Attempts: ${attempts}`;
-        
-        if (guess === randomNumber) {
-            message.textContent = `🎉 Correct! You won in ${attempts} attempts!`;
-            message.className = 'correct';
-        } else if (guess < randomNumber) {
-            message.textContent = '📈 Too low! Try higher.';
-            message.className = 'too-low';
-        } else {
-            message.textContent = '📉 Too high! Try lower.';
-            message.className = 'too-high';
-        }
-        
-        guessInput.value = '';
-        guessInput.focus();
+  } else { 
+    if (diff > 10) {
+      document.getElementById('message').textContent = '⬇️ Too high! Try again.';
+    } else {
+      document.getElementById('message').textContent = '⬇️ Close! Try a bit lower.';
     }
-    
-    submitBtn.addEventListener('click', makeGuess);
-    restartBtn.addEventListener('click', startNewGame);
-    
-    guessInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            makeGuess();
-        }
-    });
-    
-        
-    startNewGame();
-});
+  }
+}
+
+function restartGame() {
+  startGame();
+  document.getElementById('gameCard').classList.remove('card-correct');
+}
+window.onload = startGame;

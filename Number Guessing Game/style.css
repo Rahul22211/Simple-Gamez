@@ -1,104 +1,78 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+  }
 
-.container {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  .game-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
-    max-width: 400px;
-    width: 90%;
-}
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 
-h1 {
-    color: #333;
-    margin-bottom: 0.5rem;
-}
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
 
-p {
-    color: #666;
-    margin-bottom: 1.5rem;
-}
+  p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
 
-.game-area {
-    margin: 1.5rem 0;
-}
-
-input {
+  input[type="number"] {
     padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 150px;
-    margin-right: 10px;
-}
-
-input:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-button {
-    padding: 10px 20px;
+    font-size: 1em;
+    width: 60%;
+    border-radius: 10px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
     margin: 5px;
-    transition: background 0.3s;
-}
-
-#submit {
-    background: #667eea;
-    color: white;
-}
-
-#submit:hover {
-    background: #5a6fd8;
-}
-
-#restart {
-    background: #e74c3c;
-    color: white;
-}
-
-#restart:hover {
-    background: #c0392b;
-}
-
-#message {
-    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
     font-weight: bold;
-    margin: 1rem 0;
-    min-height: 25px;
-}
+  }
 
-.too-high {
-    color: #e74c3c;
-}
+  button:hover {
+    transform: scale(1.05);
+  }
 
-.too-low {
-    color: #f39c12;
-}
+  .guess-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
 
-.correct {
-    color: #27ae60;
-}
+  .restart-btn {
+    background-color: #4ecdc4;
+    color: #fff;
+  }
 
-#attempts {
-    color: #666;
-    font-size: 14px;
-}   
+  .message, .attempts {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    min-height: 24px;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  .card-correct {
+    box-shadow: 0 0 20px #4ecdc4;
+    transform: scale(1.05);
+  }
