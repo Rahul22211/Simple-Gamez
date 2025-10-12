@@ -1,0 +1,18 @@
+#wrapper{
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 450px;
+  margin-right: 450px;
+  padding: 100px;
+  text-align: center;
+  font-style: arial;
+  border: 2px solid rgb(63, 65, 122);
+  box-shadow: 2px 2px 2px 2px rgb(61, 58, 58);
+  background-color: rgb(203, 226, 245);
+  border-radius: .5rem;
+}
+#flag img {
+  width: 460px;
+  height: 250px;
+  margin-top: 10px;
+}
