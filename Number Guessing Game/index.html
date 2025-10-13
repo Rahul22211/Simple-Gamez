@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Number Guessing Game</h1>
-        <p>Guess a number between 1 and 100!</p>
-        
-        <div class="game-area">
-            <input type="number" id="guess" min="1" max="100" placeholder="Enter your guess">
-            <button id="submit">Submit</button>
-            <button id="restart">New Game</button>
-        </div>
-        
-        <div id="message"></div>
-        <div id="attempts">Attempts: 0</div>
+
+  <div class="game-card" id="gameCard">
+    <h1>Guess the Number!</h1>
+    <p>I'm thinking of a number between 1 and 100.</p>
+
+    <div class="score-row">
+      <div>Wins: <span id="wins">0</span></div>
+      <div>Best (fewest tries): <span id="best">—</span></div>
+      <button class="reset-scores" onclick="resetScores()">Reset Scores</button>
     </div>
-    
-    <script src="app.js"></script>
-</body> 
+
+    <input type="number" id="guessInput" placeholder="Enter your guess">
+    <br>
+    <button class="guess-btn" onclick="checkguess()">Guess</button>
+    <button class="restart-btn" onclick="restartGame()">Restart</button>
+
+    <div class="message" id="message"></div>
+    <div class="attempts" id="attempts"></div>
+  </div>
+
+</body>
 </html>
