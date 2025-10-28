@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emoji Memory — Food Theme</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell" role="application" aria-label="Emoji Memory Game">
+    <header class="game-header">
+      <h1 class="title">🍔 Emoji Memory — Food Theme</h1>
+      <div class="controls">
+        <div class="stats">
+          <div class="moves">Moves: <span id="movesCount">0</span></div>
+          <div class="progress" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
+        </div>
+        <div class="controls-right">
+          <button id="restartBtn" class="btn" aria-label="Restart game">Restart</button>
+          <div class="limit">Moves left: <span id="movesLeft">0</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="board-wrap">
+      <div id="gameBoard" class="memory-game" aria-live="polite"></div>
+    </section>
+
+    <!-- Win Modal -->
+    <div id="winModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="winTitle">
+      <div class="modal-card">
+        <h2 id="winTitle">You Won! 🎉</h2>
+        <p>Moves: <strong id="finalMoves">0</strong></p>
+        <div class="modal-actions">
+          <button id="playAgainBtn" class="btn">Play Again</button>
+          <button id="closeModalBtn" class="btn" aria-label="Close">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="loseModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="loseTitle">
+      <div class="modal-card">
+        <h2 id="loseTitle">Game Over 😅</h2>
+        <p>You ran out of moves. Try again!</p>
+        <div class="modal-actions">
+          <button id="tryAgainBtn" class="btn">Try Again</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <canvas id="confettiCanvas" class="confetti"></canvas>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
